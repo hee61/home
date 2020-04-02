@@ -30,9 +30,10 @@ jobs:
       - run: yarn install
     
       - run:
-          name: Install and Make
-          command: npm install && make test-coverage
-      - coveralls/upload
+          name: "Run tests"
+          command: phpdbg -qrr vendor/bin/phpunit --coverage-html build/coverage-report
+      - store_artifacts:
+          path:  build/coverage-report
 
       # run tests with phpunit or codecept
       #- run: ./vendor/bin/phpunit
