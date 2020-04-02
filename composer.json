@@ -1,13 +1,7 @@
 {
-    "name": "hee61/scripts",
-    "description": "Using the init command to create a new project.",
-    "type": "project",
-    "authors": [
-        {
-            "name": "Hannah Eakes",
-            "email": "hee61@msstate.edu"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {}
+    "require-dev": {
+        "codeception/codeception": "^4.1",
+        "codeception/module-phpbrowser": "^1.0.0",
+        "codeception/module-asserts": "^1.0.0"
+    }
 }
