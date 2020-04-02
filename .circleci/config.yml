@@ -28,7 +28,17 @@ jobs:
 
       
       - run: yarn install
+    dependencies:
+        override:
+          - mkdir -p build/logs
+          - echo "date.timezone = America/Los_Angeles" > /opt/circleci/php/$(phpenv global)/etc/conf.d/date.ini
+          - composer update --prefer-stable --prefer-lowest --no-interaction
 
+    test:
+      override:
+        - phpunit
+      post:
+        - bin/php-coveralls -v --exclude-no-stmt
      
       # run tests with phpunit or codecept
       #- run: ./vendor/bin/phpunit
