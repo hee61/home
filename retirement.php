@@ -37,7 +37,7 @@
         }
         $age_at_goal = $age + $total_years;
 
-        echo "<h1>Your age at desired goal $age_at_goal.</h1>";
+        echo '<h1>Your age at desired goal' . $age_at_goal . '</h1>';
     }
 	?>
 

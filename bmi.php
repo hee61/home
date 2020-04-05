@@ -43,7 +43,7 @@
             $status = "Obese";
         }
 
-        echo "<h1>Your bmi is </h1> $bmi<h1>This is considered</h1> $status";
+        echo '<h1>Your bmi is' . $bmi . 'This is considered</>' . $status;
 
     }
 	?>
