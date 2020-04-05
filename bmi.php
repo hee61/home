@@ -15,7 +15,7 @@
 	$weight_lbs = $_POST['Weight'];
     $errTrigger = 0;
 
-	if (!isset($feet) && !isset($weight_lbs) && !isset($inches)) {
+	if ($feet == null || $weight_lbs == null || $inches == null) {
 	    $errTrigger = 1;
     }
     if ($errTrigger == 0){

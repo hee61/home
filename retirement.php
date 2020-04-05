@@ -17,7 +17,8 @@
 
     $errTrigger = 0;
 
-    if (!isset($feet) && !isset($weight_lbs) && !isset($inches)) {
+    if (age == null || $amount_saved == null || $salary == null || $goal == null) {
+	
         $errTrigger = 1;
         echo "we made it here";
     }
