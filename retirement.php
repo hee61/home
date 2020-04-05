@@ -26,7 +26,7 @@
         $errTrigger2 = 2;
     }
 
-    if ($errTrigger == 0)
+    if ($errTrigger1 == 0)
     {
 
         $match = ($amount_saved *.01) * .35;
