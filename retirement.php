@@ -15,13 +15,17 @@
 	$amount_saved = $_POST['companyMatch'];
 	$goal = $_POST['goal'];
 
-    $errTrigger = 0;
+    $errTrigger1 = 0;
 
-    if (age == null || $amount_saved == null || $salary == null || $goal == null) {
+    if (age == null || $amount_saved == null || $salary == null || $goal == null ) {
 
-        $errTrigger = 1;
-        echo "we made it here";
+        $errTrigger1 = 1;
     }
+    if (ctype_alpha($age) || ctype_alpha($amount_saved) || ctype_alpha($salary) || ctype_alpha($goal)) {
+
+        $errTrigger2 = 2;
+    }
+
     if ($errTrigger == 0)
     {
 
@@ -43,8 +47,11 @@
 
     <p style="color: red">
         <?php
-        if($errTrigger == 1) {
-            echo "Cannot calculate bmi without necessary information. Please go back and put in everything needed";
+        if($errTrigger1 == 1) {
+            echo "Cannot calculate retirement without information. Please go back and put in everything needed";
+        }
+        if($errTrigger2 == 2) {
+            echo "Cannot calculate retirement without having every field be numerical value. Please go back and put in everything needed";
         }
         ?>
     </p>
