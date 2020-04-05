@@ -19,11 +19,12 @@
 
     if (!isset($feet) && !isset($weight_lbs) && !isset($inches)) {
         $errTrigger = 1;
+        echo "we made it here";
     }
     if ($errTrigger == 0)
     {
 
-        $match = $amount_saved * .35;
+        $match = ($amount_saved *.01) * .35;
         $total_amount_one_year = $match + $amount_saved;
         $total_years = 0;
 
@@ -34,10 +35,8 @@
             $total_years += 1;
         }
         $age_at_goal = $age + $total_years;
-        ?>
-        <h1>Your age at desired goal <?php echo $age_at_goal ?>.</h1>
-    <?php
-        echo "";
+
+        echo "<h1>Your age at desired goal <?php echo $age_at_goal ?>.</h1>";
     }
 	?>
 

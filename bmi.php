@@ -41,12 +41,12 @@
         else
         {
             $status = "Obese";
-        }?>
-    <h1>Your bmi is </h1><?php echo $bmi;?><h1>This is considered</h1><?php echo $status;?>
-    <?php
+        }
+
+        echo "<h1>Your bmi is </h1><?php echo $bmi;?><h1>This is considered</h1><?php echo $status";
+
     }
 	?>
-
 
     <p style="color: red">
         <?php
