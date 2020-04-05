@@ -18,7 +18,7 @@
     $errTrigger = 0;
 
     if (age == null || $amount_saved == null || $salary == null || $goal == null) {
-	
+
         $errTrigger = 1;
         echo "we made it here";
     }
@@ -37,7 +37,7 @@
         }
         $age_at_goal = $age + $total_years;
 
-        echo "<h1>Your age at desired goal <?php echo $age_at_goal ?>.</h1>";
+        echo "<h1>Your age at desired goal $age_at_goal.</h1>";
     }
 	?>
 
